@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
        if($stmt = mysqli_prepare($link, $sql)){
  
            // Bind variables to the prepared statement as parameters
-           mysqli_stmt_bind_param($stmt, "si", $param_carname, $param_carmodel);
+           mysqli_stmt_bind_param($stmt, "ss", $param_carname, $param_carmodel);
            
            // Set parameters
            $param_carname = $carname;
